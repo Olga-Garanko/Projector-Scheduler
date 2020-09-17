@@ -1,0 +1,174 @@
+@font-face {
+	font-family: 'MontBold';
+	src: url('./assets/fonts/MontBold.eot');
+	src: url('./assets/fonts/MontBold.woff') format('woff'), url('./assets/fonts/MontBold.ttf') format('truetype'), url('./assets/fonts/MontBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+$bgColor: #fff;
+$textColor : #000;
+$toneColor : #525f95;
+html{
+	margin: 0;
+	padding: 0;
+	font-size: 4vmin;
+	line-height: 1.2em;
+	height: 100%;
+}
+body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	color: $textColor;
+	font-family: 'MontBold', sans-serif;
+	min-width: 320px;
+	font-weight: 400;
+	background-color: $bgColor;
+}
+a{
+	color: $textColor;
+	text-decoration: none;
+}
+a:hover{
+	color: $textColor;
+	text-decoration: underline;
+}
+body * {
+	box-sizing: border-box;
+	outline: none;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+p{
+	padding: 0 0 10px 0;
+	margin: 0;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+h1{
+	padding: 0 0 0.5rem 0;
+	margin: 0.5rem 0 0;
+	font-weight: 700;
+	color: $toneColor;
+	font-family: 'MontBold', sans-serif;
+	font-size: 8vmin;
+}
+/** schedule styles **/
+.schedule {
+	padding: 1.4rem 0 0 7%;
+	width: 93%;
+}
+.main{
+	display: flex;
+	justify-content: space-between;
+}
+.date {
+	font-size: 2.3rem;
+	font-weight: bold;
+	margin: 0.5rem 0 1.2rem;
+	padding-bottom: 1.1rem;
+	border-bottom: 1px solid $textColor;
+	line-height: 0.8em;
+	&__range{
+		white-space: nowrap;
+	}
+}
+.lectory {
+	flex: 1 1 21.5%;
+	&__image {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	&__author {
+		font-size: 0.8rem;
+		font-weight: bold;
+		padding-bottom: 0.2rem;
+		line-height: 1.2em;
+	}
+	&__subject {
+		font-size: 0.8rem;
+		font-weight: bold;
+		line-height: 1.2em;
+	}
+	&__room {
+		font-size: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	&__title {
+		line-height: 0.8rem;
+	}
+}
+.auditories {
+	flex: 1 1 78.5%;
+	padding-right: 20px;
+	&__item{
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: 0.3rem;
+	}
+}
+.floor{
+	flex: 0 0 14%;
+	white-space: nowrap;
+	font-weight: 700;
+	font-size: 0.6rem;
+	padding-right: 0.5rem;
+	margin-top: -2px;
+}
+.rooms{
+	flex: 0 0 86%;
+	&__item{
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: 0.7rem;
+	}
+	&__num{
+		flex: 0 0 12%;
+		font-weight: 700;
+		font-size: 1.1rem;
+		padding-right: 0.5rem;
+	}
+	&__event{
+		flex: 0 0 88%;
+		font-size: 1.1rem;
+	}
+}
+@media all and (max-width : 767px) {
+	.main{
+		flex-wrap: wrap;
+	}
+	.date {
+		font-size: 2rem;
+	}
+	.auditories {
+		width: 100%;
+	}
+	.lectory {
+		width: 100%;
+		padding-top: 20px;
+		&__image{
+			width: 50%;
+		}
+	}
+	.floor{
+		flex: 1 0 14%;
+	}
+	.rooms{
+		flex: 1 0 86%;
+		&__num{
+			flex: 1 0 12%;
+		}
+		&__event{
+			flex: 1 0 98%;
+		}
+	}
+}
